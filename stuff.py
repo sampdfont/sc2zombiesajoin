@@ -15,6 +15,7 @@ def findClick(nameOfFile):
       pyg.click()
 
 
+fgsdjkfgjsd
 
 #pyg.locateOnScreen(nameOfFile + ".png", confidence = 0.5)
 
