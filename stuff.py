@@ -4,19 +4,34 @@ import os
 
 
 
-#top left  634,706
-#bottom right 1003,749
-regionChatBox = (634,706, 1003, 749)
+def main():
+      menu()
+      time.sleep(10)
 
 
+
+# Helper function
 def findClick(nameOfFile):
-      nameOfFile = pyg.locateOnScreen(nameOfFile + '.png', confidence=0.8)
-      pyg.moveTo(nameOfFile.left, nameOfFile.top)
-      pyg.click()
+    nameOfFile = pyg.locateOnScreen(nameOfFile + '.png', confidence=0.8)
+    pyg.moveTo(nameOfFile.left, nameOfFile.top)
+    pyg.click()
+    
+
+# If other player leaves
+if (findClick("left_game")):
+      pyg.keyDown("F10")
+      os.sleep(1.5)
+      pyg.keyDown("Q")
+
+# if other player invites
+findClick("player_invite")
+pyg.click()
+
+# main loop
+Alive = True
+while Alive:
+      findClick("left_game")
+      
 
 
-fgsdjkfgjsd
-
-#pyg.locateOnScreen(nameOfFile + ".png", confidence = 0.5)
-
-#pyg.screenshot(None, region=regionChatBox)
+main()
