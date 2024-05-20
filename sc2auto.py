@@ -58,25 +58,3 @@ def listener():
         
 
 main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# # main loop
-# Alive = True
-# while Alive:
-#       findClick("left_game")
-      
-
-
-# test commit
